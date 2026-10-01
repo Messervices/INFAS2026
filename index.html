@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Succès L1 IDE / SF – Exercices corrigés</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="gate" id="gate">
+  <div class="gate-hero">
+    <div class="cross" aria-hidden="true"></div>
+    <h1>Bienvenue à PREPA INFAS 2026</h1>
+    <p>Cours, QCM, QCD et corrections pour réussir votre préparation au diplôme d'État IDE et SF.</p>
+  </div>
+  <div class="gate-form">
+    <form id="form" autocomplete="off">
+      <h2>Accès réservé</h2>
+      <p class="lead">Veuillez entrer votre code d'accès fourni par l'administrateur.</p>
+      <input type="text" id="code" placeholder="XXXX-XXXX-XXXX" aria-label="Code d'accès" autocapitalize="characters" spellcheck="false" required>
+      <label class="keep"><input type="checkbox" id="keep" checked>Rester connecté sur cet appareil</label>
+      <button class="btn" id="ok" type="submit">Entrer</button>
+      <p id="err" role="alert"></p>
+      <div class="contact">
+        Pas encore de code ? Contactez l'administrateur au<br>
+        <a class="tel" href="tel:+2250759718750">+225 07 59 71 87 50</a>
+        <a class="wa" href="https://wa.me/2250759718750" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <header>
+    <h1>Succès L1 IDE / SF · Exercices corrigés</h1>
+    <p>Année académique 2022-2023 · Composition, examens et auto-évaluation</p>
+    <button id="out" type="button">Quitter</button>
+  </header>
+  <button id="menu" class="btn alt">☰ Sommaire</button>
+  <div class="wrap"><nav id="nav"></nav><main id="main"></main></div>
+</div>
+
+<script src="data.enc.js"></script>
+<script src="loader.js"></script>
+</body>
+</html>
