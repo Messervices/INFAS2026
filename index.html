@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PREPA INFAS 2026 – Succès L1 IDE / SF</title>
+<link rel="stylesheet" href="style.css?v=3">
+<style>
+[hidden]{display:none!important}
+.gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;background:var(--side,#0f3b47);text-align:center;position:relative;overflow:hidden}
+.gate::before{content:"";position:absolute;inset:-14px;background:url(images/salle-examen.jpg) center/cover no-repeat;filter:blur(3px)}
+.gate::after{content:"";position:absolute;inset:0;background:var(--side,#0f3b47);opacity:.88}
+.gate-in{position:relative;z-index:1;width:100%;max-width:1000px;display:grid;grid-template-columns:1fr;gap:22px;justify-items:center;align-items:center}
+.gate .photo{margin:0;width:100%;max-width:440px;border-radius:18px;overflow:hidden;border:3px solid rgba(255,255,255,.28);box-shadow:0 18px 40px rgba(0,0,0,.35);background:#fff}
+.gate .photo img{display:block;width:100%;height:190px;object-fit:cover;object-position:center 16%}
+.gate-main{width:100%;max-width:460px;display:flex;flex-direction:column;align-items:center}
+@media(min-width:900px){.gate-in{grid-template-columns:minmax(0,420px) minmax(0,460px);gap:52px;justify-content:center}.gate .photo{max-width:none}.gate .photo img{height:auto}}
+.gate h1{margin:0 0 10px;text-wrap:balance;color:#fff;font:700 clamp(1.7rem,6vw,2.3rem)/1.12 Georgia,"Iowan Old Style","Times New Roman",serif}
+.gate .tag{margin:0 0 20px;color:#dcecef;font-size:.98rem;max-width:44ch}
+.gate form{width:100%;max-width:440px;background:var(--card,#fff);color:var(--ink,#12303a);border-radius:16px;padding:24px 22px;box-shadow:0 18px 40px rgba(0,0,0,.28)}
+.gate h2{margin:0 0 6px;font-size:1.3rem}
+.gate .lead{margin:0 0 16px;color:var(--mute,#5d7580);font-size:.95rem}
+.gate input[type=text]{width:100%;padding:14px 12px;font:600 1.15rem/1 ui-monospace,"Cascadia Mono",Consolas,monospace;letter-spacing:.12em;text-align:center;color:var(--ink,#12303a);background:var(--bg,#f3f7f8);border:2px solid var(--line,#d3e0e4);border-radius:10px;box-sizing:border-box}
+.gate input[type=text]:focus{border-color:var(--acc,#0b7a75);outline:none;box-shadow:0 0 0 3px rgba(11,122,117,.2)}
+.gate .keep{display:block;margin:14px 0;font-size:.88rem;color:var(--mute,#5d7580)}
+.gate .keep input{accent-color:var(--acc,#0b7a75);margin-right:6px}
+.gate .btn{display:block;width:100%;padding:14px 16px;font:inherit;font-size:1.05rem;font-weight:700;color:#fff;background:var(--acc,#0b7a75);border:0;border-radius:10px;cursor:pointer}
+.gate .btn:hover{filter:brightness(1.08)}
+.gate .btn:disabled{opacity:.6;cursor:wait}
+.gate .btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+#err{min-height:1.2em;margin:8px 0 0;color:var(--ko,#b3261e);font-size:.9rem}
+.gate .contact{margin-top:18px;color:#dcecef;font-size:.92rem}
+.gate .contact a{text-decoration:none;font-weight:700}
+.gate .contact .tel{display:inline-block;margin-top:4px;color:#fff;font-size:1.2rem}
+.gate .contact .wa{display:inline-block;margin-top:10px;padding:6px 14px;color:#7be0a8;border:1px solid #7be0a8;border-radius:999px;font-size:.9rem}
+.gate .contact a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+
+<section class="gate" id="gate">
+  <div class="gate-in">
+    <figure class="photo">
+      <img src="images/etudiants.jpg" width="440" height="447" alt="Trois étudiants souriants tenant des livres">
+    </figure>
+
+    <div class="gate-main">
+      <h1>Bienvenue à PREPA INFAS 2026</h1>
+      <p class="tag">Cours, QCM, QCD et corrections pour réussir votre préparation au diplôme d'État IDE et SF.</p>
+
+      <form id="form" autocomplete="off">
+        <h2>Accès réservé</h2>
+        <p class="lead">Veuillez entrer votre code d'accès fourni par l'administrateur.</p>
+        <input type="text" id="code" placeholder="XXXX-XXXX-XXXX" aria-label="Code d'accès" autocapitalize="characters" spellcheck="false" required>
+        <label class="keep"><input type="checkbox" id="keep" checked>Rester connecté sur cet appareil</label>
+        <button class="btn" id="ok" type="submit">Entrer</button>
+        <p id="err" role="alert"></p>
+      </form>
+
+      <div class="contact">
+        Pas encore de code ? Contactez l'administrateur<br>
+        <a class="tel" href="tel:+2250759718750">+225 07 59 71 87 50</a><br>
+        <a class="wa" href="https://wa.me/2250759718750" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <header>
+    <h1>Succès L1 IDE / SF · Exercices corrigés</h1>
+    <p>Année académique 2022-2023 · Composition, examens et auto-évaluation</p>
+    <button id="out" type="button">Quitter</button>
+  </header>
+  <button id="menu" class="btn alt">☰ Sommaire</button>
+  <div class="wrap"><nav id="nav"></nav><main id="main"></main></div>
+</div>
+
+<script src="data.enc.js?v=3"></script>
+<script src="loader.js?v=3"></script>
+</body>
+</html>
