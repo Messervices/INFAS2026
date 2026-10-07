@@ -34,9 +34,9 @@ main h2{margin:0 0 4px;font-size:1.3rem}
 .big small{display:block;font-size:.8rem;font-weight:600;letter-spacing:.2em;color:var(--mute);margin-top:2px}
 [hidden]{display:none!important}
 #home{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:24px 20px 34px;background:linear-gradient(160deg,#2a505d 0%,#21414e 55%,#1d3a46 100%);color:#fff;text-align:center}
-#home .hero{width:100%;max-width:560px;border-radius:26px;border:5px solid #fff;background:#fff;display:block;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-#home h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,7vw,3rem);line-height:1.15;margin:28px 0 14px;font-weight:700;letter-spacing:.01em}
-#home p{max-width:520px;margin:0 0 30px;font-size:clamp(1rem,3.6vw,1.2rem);line-height:1.55;color:#d9eaee}
+#home .hero{width:auto;height:auto;max-width:100%;max-height:36vh;object-fit:contain;border-radius:26px;border:5px solid #fff;background:#fff;display:block;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+#home h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,7vw,3rem);line-height:1.15;margin:20px 0 10px;font-weight:700;letter-spacing:.01em}
+#home p{max-width:520px;margin:0 0 22px;font-size:clamp(1rem,3.6vw,1.2rem);line-height:1.55;color:#d9eaee}
 .homebtns{display:flex;flex-direction:column;gap:16px;width:100%;max-width:420px}
 .hbtn{display:block;width:100%;padding:22px 16px;border:0;border-radius:18px;font:inherit;font-size:1.5rem;font-weight:800;letter-spacing:.12em;cursor:pointer;color:#fff;box-shadow:0 6px 18px rgba(0,0,0,.3);transition:transform .08s}
 .hbtn:active{transform:scale(.98)}
@@ -82,3 +82,11 @@ table.t th{background:var(--card);color:var(--acc)}
 .course table th,.course table td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
 .course table th{background:var(--card);color:var(--acc)}
 
+
+/* Écran de choix de la licence (bouton EXERCICE) */
+#lic{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px 34px;background:linear-gradient(160deg,#2a505d 0%,#21414e 55%,#1d3a46 100%);color:#fff;text-align:center}
+#lic .back{align-self:flex-start;margin-bottom:auto}
+#lic h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.9rem,7vw,3rem);margin:20px 0 6px}
+#lic p{margin:0 0 26px;font-size:clamp(1rem,3.6vw,1.2rem);color:#d9eaee}
+.hbtn.l1{background:#0b9a8f}.hbtn.l2{background:#2b7bb9}.hbtn.l3{background:#7b4fc9}
+#toast2{min-height:1.4em;margin:16px 0 auto;color:#ffe3bf;font-weight:600}
